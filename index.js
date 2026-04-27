@@ -39,6 +39,7 @@ let quiz = [{
         let timer;
         let score = 0
         answered = false
+        const ProgressEl = document.getElementById("progress")
         const questionEl = document.getElementById("question")
         const optionsEl = document.getElementById("options")
         const resultEl = document.getElementById("result")
@@ -50,6 +51,7 @@ let quiz = [{
         optionsEl.innerHTML = ""
         resultEl.innerHTML = ""
         answered = false 
+        ProgressEl.textContent = " Question " + (index + 1) +  " of "  + quiz.length
         current.options.forEach((option)=>{
             let btn = document.createElement("button")
             btn.textContent = option 
